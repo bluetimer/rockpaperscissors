@@ -28,6 +28,16 @@ $("#shoot").click(function() {
         $("#computerChoice").html("Paper");
         x = "paper";
     }
+if (choice === "rock"){
+    if (x === "rock"){
+        $("#result").html("Tied.");
+    }else if( x === "paper"){
+        $("#result").html("Computer Wins!");
+    }else {
+        $("#result").html("User Wins!");
+    }
+}
+
 if (choice === "paper"){
     if (x === "paper"){
         $("#result").html("Tied.");
