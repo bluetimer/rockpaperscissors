@@ -14,19 +14,30 @@ $( "document" ).ready(function() {
 $("#shoot").click(function() {
   let choice = $("#input").val();
   $("#userChoice").text(choice);
-  let computerchoice = getRandomInt(3);
-
+  let computerchoice = Math.random();
   console.log(computerchoice);
-  if (computerchoice === 0){
-      computerchoice.toString();
-      computerchoice = "Rock";
-  } else if (computerchoice === 1){
-      computerchoice.toString();
-      computerchoice = "Scissors";
-  }else {
-      computerchoice.toString();
-      computerchoice = "Paper";
-  }
+  let x;
+  if (computerchoice > .60) {
+        $("#computerChoice").html("Rock");
+        x = "rock";
+    }else if (computerchoice > .30 && computerchoice <.60){
+        $("#computerChoice").html("Scissors");
+        x = "scissors";
+    }
+    else {
+        $("#computerChoice").html("Paper");
+        x = "paper";
+    }
+if (choice === "paper"){
+    if (x === "paper"){
+        $("#result").html("Tied.");
+    }else if( x === "scissors"){
+        $("#result").html("Computer Wins!");
+    }else {
+        $("#result").html("User Wins!");
+    }
+}
+  
     
 });
 });
