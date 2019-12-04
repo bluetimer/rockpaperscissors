@@ -47,6 +47,15 @@ if (choice === "paper"){
         $("#result").html("User Wins!");
     }
 }
+if (choice === "scissors"){
+    if (x === "scissors"){
+        $("#result").html("Tied.");
+    }else if( x === "rock"){
+        $("#result").html("Computer Wins!");
+    }else {
+        $("#result").html("User Wins!");
+    }
+}
   
     
 });
