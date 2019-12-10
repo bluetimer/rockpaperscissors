@@ -40,7 +40,7 @@ if (choice === "rock"){
     }
 }
 
-if (choice === "paper"){
+else if (choice === "paper"){
     if (x === "paper"){
         $("#result").html("Tied.");
     }else if( x === "scissors"){
@@ -51,18 +51,18 @@ if (choice === "paper"){
         $("#result").html("Try again.......");
     }
 }
-if (choice === "scissors"){
+else if (choice === "scissors"){
     if (x === "scissors"){
         $("#result").html("Tied.");
     }else if( x === "rock"){
         $("#result").html("Computer Wins!");
     }else if (x === "paper"){
         $("#result").html("User Wins!");
-    }else{
+    }
+}else{
         $("#result").html("Try again.......");
     }
-}
-  
+
     
 });
 });
